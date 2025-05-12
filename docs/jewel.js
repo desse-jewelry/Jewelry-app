@@ -28,15 +28,24 @@ function displayJewelry(items, filterStyle = "all") {
     return;
   }
 
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
   filtered.forEach(item => {
+    const isFavorite = favorites.some(fav => fav.id == item.id);
+
     const card = document.createElement("div");
     card.className = "card";
+    card.setAttribute("data-aos", "zoom-in");
     card.innerHTML = `
       <img src="${item.image}" alt="${item.title}">
       <h3>${item.title}</h3>
       <p>$${item.price}</p>
       <p><em>Style: ${item.style}</em></p>
-      <button class="favorite-btn" data-id="${item.id}">Add to Favorites</button>
+      <p>${item.description}</p>
+      <button class="favorite-btn" data-id="${item.id}">
+        ${isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+      </button>
+      <a href="https://wa.me/2347055783702?text=Hi%2C%20I%20want%20to%20buy%20the%20${encodeURIComponent(item.title)}" target="_blank" class="buy-btn">Buy Now</a>
     `;
     jewelryList.appendChild(card);
   });
@@ -44,22 +53,26 @@ function displayJewelry(items, filterStyle = "all") {
   document.querySelectorAll(".favorite-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const id = btn.getAttribute("data-id");
-      addToFavorites(id, items);
+      toggleFavorite(id, items);
     });
   });
 }
 
-function addToFavorites(id, items) {
+function toggleFavorite(id, items) {
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  const exists = favorites.some(fav => fav.id == id);
-  if (!exists) {
+  const index = favorites.findIndex(fav => fav.id == id);
+
+  if (index === -1) {
     const item = items.find(i => i.id == id);
     favorites.push(item);
-    localStorage.setItem("favorites", JSON.stringify(favorites));
     alert(`${item.title} added to favorites!`);
   } else {
-    alert("This item is already in your favorites.");
+    const removed = favorites.splice(index, 1)[0];
+    alert(`${removed.title} removed from favorites.`);
   }
+
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+  displayJewelry(items); // Refresh the UI to update the button text
 }
 
 styleForm.addEventListener("submit", async (e) => {
@@ -75,6 +88,7 @@ hamburger.addEventListener("click", () => {
 });
 
 fetchJewelry().then(data => displayJewelry(data));
+
 const favoritesLink = document.getElementById("favoritesLink");
 
 favoritesLink.addEventListener("click", (e) => {
@@ -86,6 +100,7 @@ favoritesLink.addEventListener("click", (e) => {
     displayJewelry(favorites, "all");
   }
 });
+
 const homeLink = document.getElementById("homeLink");
 
 homeLink.addEventListener("click", async (e) => {
@@ -93,6 +108,7 @@ homeLink.addEventListener("click", async (e) => {
   const allJewelry = await fetchJewelry();
   displayJewelry(allJewelry, "all");
 });
+
 const searchInput = document.getElementById('search');
 
 searchInput.addEventListener('input', async (e) => {
@@ -101,40 +117,6 @@ searchInput.addEventListener('input', async (e) => {
   const filteredJewelry = jewelry.filter(item => item.title.toLowerCase().includes(query));
   displayJewelry(filteredJewelry);
 });
-
-
-function displayJewelry(items, filterStyle = "all") {
-  jewelryList.innerHTML = "";
-
-  const filtered = filterStyle === "all" ? items : items.filter(i => i.style === filterStyle);
-
-  if (filtered.length === 0) {
-    jewelryList.innerHTML = "<p>No jewelry matches this style.</p>";
-    return;
-  }
-
-  filtered.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-      <img src="${item.image}" alt="${item.title}">
-      <h3>${item.title}</h3>
-      <p>$${item.price}</p>
-      <p><em>Style: ${item.style}</em></p>
-      <p>${item.description}</p>
-      <button class="favorite-btn" data-id="${item.id}">Add to Favorites</button>
-      <a href="https://wa.me/2347055783702?text=Hi%2C%20I%20want%20to%20buy%20the%20${encodeURIComponent(item.title)}" target="_blank" class="buy-btn">Buy Now</a>
-    `;
-    jewelryList.appendChild(card);
-  });
-
-  document.querySelectorAll(".favorite-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const id = btn.getAttribute("data-id");
-      addToFavorites(id, items);
-    });
-  });
-}
 
 const backToTopBtn = document.getElementById("backToTop");
 
