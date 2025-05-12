@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Elegant Pearl Necklace",
+    "image": "pearln.jpg",
+    "price": 49.99,
+    "description": "Luxurious pearl necklace perfect for formal occasions.",
+    "style": "formal"
+  },
+  {
+    "id": 2,
+    "title": "Gold Charm Bracelet",
+    "image": "bracelet.jpg",
+    "price": 29.99,
+    "description": "Cute bracelet, ideal as a gift.",
+    "style": "gift"
+  },
+  {
+    "id": 3,
+    "title": "Boho Beaded Earrings",
+    "image": "pearlear.jpg",
+    "price": 19.99,
+    "description": "Stylish earrings for everyday wear.",
+    "style": "casual"
+  },
+  {
+    "id": 4,
+    "title": "Heart Shaped Earrings",
+    "image": "earring.jpg",
+    "price": 39.99,
+    "description": "Elegant earrings for formal events.",
+    "style": "formal"
+  },
+  {
+    "id": 5,
+    "title": "Beaded Love Necklace and Bracelet Set",
+    "image": "set.jpg",
+    "price": 59.99,
+    "description": "A beautiful gold pendant for a gift.",
+    "style": "gift"
+  },
+  {
+    "id": 6,
+    "title": "Gold Chunky Rings",
+    "image": "rings.jpg",
+    "price": 34.99,
+    "description": "Trendy rings for everyday sparkle.",
+    "style": "casual"
+  },
+  {
+    "id": 7,
+    "title": "Gift Set: Necklace + Earrings",
+    "image": "giftset.jpg",
+    "price": 89.99,
+    "description": "A beautiful gift set in a velvet box.",
+    "style": "gift"
+  }
+]
