@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Elegant Pearl Necklace",
+    "image": "pearln.jpg",
+    "price": 49.99,
+    "description": "Luxurious pearl necklace perfect for formal occasions.",
+    "style": "formal"
+  },
+  {
+    "id": 2,
+    "title": "Gold Charm Bracelet",
+    "image": "bracelet.jpg",
+    "price": 29.99,
+    "description": "Cute bracelet, ideal as a gift.",
+    "style": "gift"
+  },
+  {
+    "id": 3,
+    "title": "Boho Beaded Earrings",
+    "image": "pearlear.jpg",
+    "price": 19.99,
+    "description": "Stylish earrings for everyday wear.",
+    "style": "casual"
+  },
+  {
+    "id": 4,
+    "title": "Heart Shaped Earrings",
+    "image": "earring.jpg",
+    "price": 39.99,
+    "description": "Elegant earrings for formal events.",
+    "style": "formal"
+  },
+  {
+    "id": 5,
+    "title": "Beaded Love Necklace and Bracelet Set",
+    "image": "set.jpg",
+    "price": 59.99,
+    "description": "A beautiful gold pendant for a gift.",
+    "style": "gift"
+  },
+  {
+    "id": 6,
+    "title": "Gold Chunky Rings",
+    "image": "rings.jpg",
+    "price": 34.99,
+    "description": "Trendy rings for everyday sparkle.",
+    "style": "casual"
+  },
+  {
+    "id": 7,
+    "title": "Gift Set: Necklace + Earrings",
+    "image": "giftset.jpg",
+    "price": 89.99,
+    "description": "A beautiful gift set in a velvet box.",
+    "style": "gift"
+  },
+  {
+    "id": 8,
+    "title": "Gift Set: Watch + Bracelet + Necklace Set",
+    "image": "watch.jpg",
+    "price": 99.99,
+    "description": "Gold watch set in velvet box, ideal for gifting.",
+    "style": "gift"
+  },
+  {
+    "id": 9,
+    "title": "Minimal Gold Bracelet",
+    "image": "anklet.jpg",
+    "price": 22.50,
+    "description": "Delicate gold bracelet, perfect for casual wear.",
+    "style": "casual"
+  },
+  {
+    "id": 10,
+    "title": "Gem Stone Necklace Set",
+    "image": "stone.jpg",
+    "price": 64.00,
+    "description": "Dazzling Necklace set for a glamorous night.",
+    "style": "formal"
+  },
+  {
+    "id": 11,
+    "title": "Vintage Flower Earrings",
+    "image": "Flower.jpg",
+    "price": 72.00,
+    "description": "A statement piece with timeless charm.",
+    "style": "casual"
+  },
+  {
+    "id": 12,
+    "title": "Minimalist Summer Rings",
+    "image": "pink.jpg",
+    "price": 18.99,
+    "description": "A trendy stack of gold and pink summer rings.",
+    "style": "casual"
+  }
+]
