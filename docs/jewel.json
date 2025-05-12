@@ -1,4 +1,4 @@
-[
+
   {
     "id": 1,
     "title": "Elegant Pearl Necklace",
@@ -54,5 +54,45 @@
     "price": 89.99,
     "description": "A beautiful gift set in a velvet box.",
     "style": "gift"
+  },
+  {
+    "id": 8,
+    "title": "Gift Set: Watch + Bracelet + Necklace Set",
+    "image": "watch.jpg",
+    "price": 99.99,
+    "description": "Gold watch set in velvet box, ideal for gifting.",
+    "style": "gift"
+  },
+  {
+    "id": 9,
+    "title": "Minimal Gold Bracelet",
+    "image": "anklet.jpg",
+    "price": 22.50,
+    "description": "Delicate gold bracelet, perfect for casual wear.",
+    "style": "casual"
+  },
+  {
+    "id": 10,
+    "title": "Gem Stone Necklace Set",
+    "image": "stone.jpg",
+    "price": 64.00,
+    "description": "Dazzling Necklace set for a glamorous night.",
+    "style": "formal"
+  },
+  {
+    "id": 11,
+    "title": "Vintage Flower Earrings",
+    "image": "Flower.jpg",
+    "price": 72.00,
+    "description": "A statement piece with timeless charm.",
+    "style": "casual"
+  },
+  {
+    "id": 12,
+    "title": "Minimalist Summer Rings",
+    "image": "pink.jpg",
+    "price": 18.99,
+    "description": "A trendy stack of gold and pink summer rings.",
+    "style": "casual"
   }
 ]
