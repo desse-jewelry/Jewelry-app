@@ -6,6 +6,14 @@
   <title>Déesse Jewelry</title>
   <link rel="stylesheet" href="jewel.css" />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <div id="preloader">
@@ -13,8 +21,17 @@
   </div>
   
   <header>
-    <div class="logo">Déesse</div>
-    <h1>Jewelry Collection</h1>
+   <header>
+  <div class="logo">
+    <span>Déesse</span>
+    <div class="star-sparkle"></div>
+    <div class="star-sparkle"></div>
+    <div class="star-sparkle"></div>
+    <div class="star-sparkle"></div>
+    <div class="star-sparkle"></div>
+    <p class="jewelry-collection">Jewelry Collection</p>
+  </div>
+</header>
     <nav class="nav">
       <ul class="nav-links">
 <li><a href="#" id="homeLink">Home</a></li>
@@ -67,5 +84,32 @@
     }, 2000); // 2000 milliseconds = 2 seconds
   });
 </script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+
+<footer class="footer">
+  <p>Follow us:</p>
+  <div class="social-icons">
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://wa.me/2347055783702" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+  <p>&copy; 2025 Déesse</p>
+</footer>
+
+
 </body>
 </html>
