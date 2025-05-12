@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Déesse Jewelry</title>
+  <link rel="stylesheet" href="jewel.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="preloader">
+    <div class="loader-heart"></div>
+  </div>
+  
+  <header>
+    <div class="logo">Déesse</div>
+    <h1>Jewelry Collection</h1>
+    <nav class="nav">
+      <ul class="nav-links">
+<li><a href="#" id="homeLink">Home</a></li>
+       <li><a href="#contact">Contact</a></li>
+<li><a href="#" id="favoritesLink">Favorites</a></li>
+      </ul>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+ <button id="toggleTheme">🌙</button>
+    </nav>
+  </header>
+<input type="text" id="search" placeholder="Search jewelry..." />
+
+<button id="backToTop" title="Back to top">&#8679;</button>
+
+
+  <main>
+    <form id="styleForm">
+      <label for="styleSelect">Choose a style:</label>
+      <select id="styleSelect">
+        <option value="all">All</option>
+        <option value="casual">Casual</option>
+        <option value="formal">Formal</option>
+        <option value="gift">Gift</option>
+      </select>
+      <button type="submit">Suggest Jewelry</button>
+    </form>
+
+    <div id="jewelryList" class="jewelry-container"></div>
+  </main>
+
+  <script src="jewel.js"></script>
+ <section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your name" required><br>
+    <input type="email" placeholder="Your email" required><br>
+    <textarea placeholder="Your message" required></textarea><br>
+    <button type="submit">Send</button>
+  </form>
+</section>
+<script>
+  window.addEventListener("load", () => {
+    // Force preloader to show for 2 seconds
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+    }, 2000); // 2000 milliseconds = 2 seconds
+  });
+</script>
+</body>
+</html>
